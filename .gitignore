@@ -1,0 +1,50 @@
+# editor settings
+.idea
+.vscode
+_darcs
+.DS_Store
+
+CLAUDE.md
+.local
+
+*.png
+*.json
+*.diff
+*.jpg
+!figures/
+!figures/**
+
+# Vendor/third-party trees: install via git clone or Zenodo archives (see README)
+/Deformable-DETR/
+/detectron2/
+
+# Test data bundle (download from Zenodo; see README)
+/test_data/
+
+# Model weights / serialized Python (do not commit)
+*.pth
+*.pkl
+*.filepart
+cellpose_model
+
+# Build artifacts
+**/build/
+*.o
+*.so
+
+# Keep data/train and data/test as empty placeholders; ignore everything else under data/
+/data/*
+!/data/train/
+!/data/test/
+/data/train/*
+!/data/train/.gitkeep
+/data/test/*
+!/data/test/.gitkeep
+
+# Training/inference outputs (logs, checkpoints, visualizations)
+/output/
+/results/*
+!/results/.gitkeep
+
+__pycache__/
+*.py[cod]
